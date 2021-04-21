@@ -1238,6 +1238,8 @@ MonoBehaviour:
   eighthTourButton: {fileID: 0}
   ninthTourButton: {fileID: 0}
   tenthTourButton: {fileID: 0}
+  beginTourButton: {fileID: 0}
+  inspectTourButton: {fileID: 0}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -1421,6 +1423,8 @@ MonoBehaviour:
   eighthTourButton: {fileID: 0}
   ninthTourButton: {fileID: 0}
   tenthTourButton: {fileID: 0}
+  beginTourButton: {fileID: 0}
+  inspectTourButton: {fileID: 0}
 --- !u!1 &551248575
 GameObject:
   m_ObjectHideFlags: 0
@@ -1806,8 +1810,8 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1920, y: 1080}
-  m_ScreenMatchMode: 0
+  m_ReferenceResolution: {x: 720, y: 1080}
+  m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -3504,7 +3508,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1621601250}
   m_HandleRect: {fileID: 1621601249}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:

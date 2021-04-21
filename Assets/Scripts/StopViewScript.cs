@@ -32,7 +32,8 @@ public class StopViewScript : MonoBehaviour
     void Start()
     {
         stopData = TourViewScript.tourData.stops[TourViewScript.currentStop];
-        print(stopData.stop_name);
+        print("ENTERING STOP " + stopData.stop_name);
+
         for (int i = 0; i < stopData.media.Count; i++)
         {
             print(stopData.media[i].s3_loc);
@@ -50,6 +51,9 @@ public class StopViewScript : MonoBehaviour
 
         GameObject.Find("DescriptionText").GetComponent<Text>().text = stopData.stop_desc;
         GameObject.Find("MediaCreditsText").GetComponent<Text>().text = stopData.media_desc;
+        GameObject.Find("StopText").GetComponent<Text>().text = stopData.stop_name;
+
+
 
     }
 
