@@ -13,6 +13,8 @@ public class StopViewScript : MonoBehaviour
     public Button previousImageButton;
     public Button nextImageButton;
 
+    public RawImage stopPicture;
+
     IEnumerator SetStopImage()
     {
         if (imageIndex < stopData.media.Count)
@@ -20,7 +22,11 @@ public class StopViewScript : MonoBehaviour
             print(stopData.media[imageIndex].s3_loc);
             WWW www = new WWW(stopData.media[imageIndex].s3_loc);
             yield return (www);
-            GameObject.Find("StopImage").GetComponent<RawImage>().texture = www.texture;
+
+
+
+            stopPicture.texture = www.texture;
+            stopPicture.SizeToParent();
 
 
         }
@@ -31,6 +37,9 @@ public class StopViewScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        stopPicture = GameObject.Find("StopImage").GetComponent<RawImage>();
+
         stopData = TourViewScript.tourData.stops[TourViewScript.currentStop];
         print("ENTERING STOP " + stopData.stop_name);
 
